@@ -1,0 +1,65 @@
+### Список всех товаров
+GET /api/product/getall HTTP/1.1
+Host: localhost:7000
+
+### Получить один товар
+GET /api/product/getone/7 HTTP/1.1
+Host: localhost:7000
+
+### Создать новый товар
+POST /api/product/create HTTP/1.1
+Host: localhost:7000
+Content-Type: multipart/form-data; boundary=MultiPartFormDataBoundary
+
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="name"
+Content-Type: text/plain; charset=utf-8
+
+Товар № 26
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="price"
+Content-Type: text/plain; charset=utf-8
+
+77777
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="props"
+Content-type: text/plain; charset=utf-8
+
+[{"name": "Свойство 3", "value": "Значение 3"},{"name": "Свойство 4", "value": "Значение 4"}]
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="image"; filename="picture.jpg"
+Content-Type: image/jpeg
+
+< ./picture.jpg
+--MultiPartFormDataBoundary--
+
+### Обновить товар
+PUT /api/product/update/4 HTTP/1.1
+Host: localhost:7000
+Content-Type: multipart/form-data; boundary=MultiPartFormDataBoundary
+
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="name"
+Content-Type: text/plain; charset=utf-8
+
+Товар № 4 (new)
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="price"
+Content-Type: text/plain; charset=utf-8
+
+99999
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="props"
+Content-type: text/plain; charset=utf-8
+
+[{"name": "Свойство 3 (new)", "value": "Значение 3 (new)"},{"name": "Свойство 4 (new)", "value": "Значение 4 (new)"}]
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="image"; filename="picture.jpg"
+Content-Type: image/jpeg
+
+< ./picture-new.jpg
+--MultiPartFormDataBoundary--
+
+### Удалить товар
+DELETE /api/product/delete/5 HTTP/1.1
+Host: localhost:7000

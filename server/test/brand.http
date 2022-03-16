@@ -1,0 +1,33 @@
+### Список всех брендов
+GET /api/brand/getall HTTP/1.1
+Host: localhost:7000
+Cookie: uuid=this-id-uuid-client
+
+### Получить один бренд
+GET /api/brand/getone/1 HTTP/1.1
+Host: localhost:7000
+
+### Создать новый бренд
+POST /api/brand/create HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyNUBtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjM4MDk4MjQ0LCJleHAiOjE2MzgxODQ2NDR9.eDlzfF2R1yFwpjhf-Sx6k3J2WbknyBlnLr7RIk87TTA
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Xiaomi"
+}
+
+### Обновить бренд
+PUT /api/brand/update/1 HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyNUBtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjM4MDk4MjQ0LCJleHAiOjE2MzgxODQ2NDR9.eDlzfF2R1yFwpjhf-Sx6k3J2WbknyBlnLr7RIk87TTA
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Первый бренд (new)"
+}
+
+### Удалить бренд
+DELETE /api/brand/delete/1 HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyNUBtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjM4MDk4MjQ0LCJleHAiOjE2MzgxODQ2NDR9.eDlzfF2R1yFwpjhf-Sx6k3J2WbknyBlnLr7RIk87TTA

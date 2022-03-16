@@ -1,0 +1,7 @@
+### Получить рейтинг одного товара
+GET /api/rating/product/1 HTTP/1.1
+Host: localhost:7000
+
+### Проголосовать за один товар
+POST /api/rating/product/1/rate/5 HTTP/1.1
+Host: localhost:7000

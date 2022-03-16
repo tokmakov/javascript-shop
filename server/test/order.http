@@ -1,0 +1,75 @@
+### Список всех заказов (для администратора)
+GET /api/order/admin/getall HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyM0BtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjQyMjM0NjMyLCJleHAiOjE2NDIzMjEwMzJ9.cMZ6cEUKDNfhd3fStqg-KOAvG-m5Y4GTyyx0n1-CgMA
+
+### Получить один заказ (для администратора)
+GET /api/order/admin/getone/1 HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyM0BtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjQyMjM0NjMyLCJleHAiOjE2NDIzMjEwMzJ9.cMZ6cEUKDNfhd3fStqg-KOAvG-m5Y4GTyyx0n1-CgMA
+
+### Получить заказы пользователя (для администратора)
+GET /api/order/admin/getall/user/5 HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyM0BtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjQyMjM0NjMyLCJleHAiOjE2NDIzMjEwMzJ9.cMZ6cEUKDNfhd3fStqg-KOAvG-m5Y4GTyyx0n1-CgMA
+
+### Создать новый заказ (для администратора)
+POST /api/order/admin/create HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyM0BtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjQyMjM0NjMyLCJleHAiOjE2NDIzMjEwMzJ9.cMZ6cEUKDNfhd3fStqg-KOAvG-m5Y4GTyyx0n1-CgMA
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Сергей Иванов",
+    "email": "ivanov@mail.ru",
+    "phone": "(999) 123-45-67",
+    "address": "Москва, улица Строителей, дом 123, кв.456",
+    "comment": "Комментарий к заказу",
+    "userId": 3,
+    "items": [
+        {"name": "Товар раз", "price": 123, "quantity": 2},
+        {"name": "Товар два", "price": 456, "quantity": 1}
+    ]
+}
+
+### Список всех заказов пользователя
+GET /api/order/user/getall HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyM0BtYWlsLnJ1Iiwicm9sZSI6IlVTRVIiLCJpYXQiOjE2NDIxNDY1MDUsImV4cCI6MTY0MjIzMjkwNX0.vbDBq-hR1B8Bqdj4zu_75McGKaqapEBsepKP3LtpMnQ
+Cookie: basketId=s%3A38.mDPMc%2FsU2MOOiCtZZFPZ%2F9KWza4peanqnQoquOqX26o
+### нужен jwt-токен, чтобы из него получить id пользователя
+
+### Получить один заказ пользователя
+GET /api/order/user/getone/5 HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyM0BtYWlsLnJ1Iiwicm9sZSI6IlVTRVIiLCJpYXQiOjE2NDIxNDY1MDUsImV4cCI6MTY0MjIzMjkwNX0.vbDBq-hR1B8Bqdj4zu_75McGKaqapEBsepKP3LtpMnQ
+Cookie: basketId=s%3A38.mDPMc%2FsU2MOOiCtZZFPZ%2F9KWza4peanqnQoquOqX26o
+
+### Создать новый заказ пользователя
+POST /api/order/user/create HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyM0BtYWlsLnJ1Iiwicm9sZSI6IlVTRVIiLCJpYXQiOjE2NDIxNDY1MDUsImV4cCI6MTY0MjIzMjkwNX0.vbDBq-hR1B8Bqdj4zu_75McGKaqapEBsepKP3LtpMnQ
+Cookie: basketId=s%3A38.mDPMc%2FsU2MOOiCtZZFPZ%2F9KWza4peanqnQoquOqX26o
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Сергей Иванов",
+    "email": "ivanov@mail.ru",
+    "phone": "(999) 123-45-67",
+    "address": "Москва, улица Строителей, дом 123, кв.456",
+    "comment": "Комментарий к заказу"
+}
+
+### Создать новый заказ посетителя
+POST /api/order/guest/create HTTP/1.1
+Host: localhost:7000
+Cookie: basketId=s%3A38.mDPMc%2FsU2MOOiCtZZFPZ%2F9KWza4peanqnQoquOqX26o
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Сергей Иванов",
+    "email": "ivanov@mail.ru",
+    "phone": "(999) 123-45-67",
+    "address": "Москва, улица Строителей, дом 123, кв.789",
+    "comment": "Комментарий к заказу"
+}

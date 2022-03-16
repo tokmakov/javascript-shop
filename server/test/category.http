@@ -1,0 +1,32 @@
+### Список всех категорий
+GET /api/category/getall HTTP/1.1
+Host: localhost:7000
+
+### Получить одну категорию
+GET /api/category/getone/1 HTTP/1.1
+Host: localhost:7000
+
+### Создать новую категорию
+POST /api/category/create HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyNUBtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjM4MDk4MjQ0LCJleHAiOjE2MzgxODQ2NDR9.eDlzfF2R1yFwpjhf-Sx6k3J2WbknyBlnLr7RIk87TTA
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Первая категория"
+}
+
+### Обновить категорию
+PUT /api/category/update/1 HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyNUBtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjM4MDk4MjQ0LCJleHAiOjE2MzgxODQ2NDR9.eDlzfF2R1yFwpjhf-Sx6k3J2WbknyBlnLr7RIk87TTA
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Первая категория (new)"
+}
+
+### Удалить категорию
+DELETE /api/category/delete/1 HTTP/1.1
+Host: localhost:7000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ1c2VyNUBtYWlsLnJ1Iiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjM4MDk4MjQ0LCJleHAiOjE2MzgxODQ2NDR9.eDlzfF2R1yFwpjhf-Sx6k3J2WbknyBlnLr7RIk87TTA

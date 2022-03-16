@@ -1,0 +1,37 @@
+{
+  "name": "shop-server",
+  "version": "1.0.0",
+  "description": "Интернет магазин, сервер",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon index.js"
+  },
+  "keywords": [
+    "Backend",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "sequelize"
+  ],
+  "author": "Евгений Токмаков",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.9.0",
+    "uuid": "^8.3.2"
+  }
+}

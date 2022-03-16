@@ -1,0 +1,29 @@
+### Получить корзину
+GET /api/basket/getone HTTP/1.1
+Host: localhost:7000
+Cookie: basketId=5
+
+### Добавить в корзину
+PUT /api/basket/product/3/append/5 HTTP/1.1
+Host: localhost:7000
+Cookie: basketId=5
+
+### Удалить из корзины
+PUT /api/basket/product/1/remove HTTP/1.1
+Host: localhost:7000
+Cookie: basketId=5
+
+### Увеличить количество
+PUT /api/basket/product/1/increment/4 HTTP/1.1
+Host: localhost:7000
+Cookie: basketId=5
+
+### Уменьшить количество
+PUT /api/basket/product/1/decrement/2 HTTP/1.1
+Host: localhost:7000
+Cookie: basketId=5
+
+### Очистить корзину
+PUT /api/basket/clear HTTP/1.1
+Host: localhost:7000
+Cookie: basketId=5

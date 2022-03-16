@@ -1,0 +1,122 @@
+##############################################
+## ТОВАРЫ
+##############################################
+
+### Список всех товаров
+GET /api/product/getall HTTP/1.1
+Host: localhost:7000
+
+### Получить один товар
+GET /api/product/getone/1 HTTP/1.1
+Host: localhost:7000
+
+### Создать новый товар
+POST /api/product/create HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Первый товар",
+    "price": 11111
+}
+
+### Обновить товар
+PUT /api/product/update/1 HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Первый товар (обновление)",
+    "price": 22222
+}
+
+### Удалить товар
+DELETE /api/product/delete/1 HTTP/1.1
+Host: localhost:7000
+
+
+
+
+### создание товара, у которого есть свойства
+POST /api/product/create HTTP/1.1
+Host: localhost:7000
+Content-Type: multipart/form-data; boundary=MultiPartFormDataBoundary
+
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="name"
+Content-Type: text/plain; charset=utf-8
+
+Название товара 18
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="price"
+Content-Type: text/plain; charset=utf-8
+
+12345
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="props"
+Content-type: text/plain; charset=utf-8
+
+[{"name": "Свойство 1", "value": "Значение 1"},{"name": "Свойство 2", "value": "Значение 2"}]
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="image"; filename="picture.jpg"
+Content-Type: image/jpeg
+
+< ./picture.jpg
+--MultiPartFormDataBoundary--
+
+
+
+
+### обновление товара с изображением
+PUT /api/product/update/18 HTTP/1.1
+Host: localhost:7000
+Content-Type: multipart/form-data; boundary=MultiPartFormDataBoundary
+
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="name"
+
+Название товара 10
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="price"
+
+22222
+--MultiPartFormDataBoundary
+Content-Disposition: form-data; name="image"; filename="picture.jpg"
+Content-Type: image/jpeg
+
+< ./updated.jpg
+--MultiPartFormDataBoundary--
+
+##############################################
+## КАТЕГОРИИ
+##############################################
+
+### Список всех категорий
+GET /api/category/getall HTTP/1.1
+Host: localhost:7000
+
+### Получить одну категорию
+GET /api/category/getone/1 HTTP/1.1
+Host: localhost:7000
+
+### Создать новую категорию
+POST /api/category/create HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Первая категория"
+}
+
+### Обновить категорию
+PUT /api/category/update/1 HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Первая категория (обновление)"
+}
+
+### Удалить категорию
+DELETE /api/category/delete/1 HTTP/1.1
+Host: localhost:7000

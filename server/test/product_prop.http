@@ -1,0 +1,31 @@
+### Список всех свойств товара id=1
+GET /api/product/1/property/getall HTTP/1.1
+Host: localhost:7000
+
+### Получить одно свойство товара
+GET /api/product/1/property/getone/1 HTTP/1.1
+Host: localhost:7000
+
+### Создать новое свойство товара
+POST /api/product/1/property/create HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Новое свойство товара",
+    "value": "Значение свойства товара"
+}
+
+### Обновить свойство товара
+PUT /api/product/1/property/update/3 HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "name": "Свойство товара (updated)",
+    "value": "Значение свойства (updated)"
+}
+
+### Удалить свойство товара
+DELETE /api/product/1/property/delete/3 HTTP/1.1
+Host: localhost:7000
