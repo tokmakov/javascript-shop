@@ -69,7 +69,7 @@ npm start
 
 
 ```
-/path/to/posgre/bin/psql -U postgres online_store < /path/to/shop/database.sql
+/path/to/postgre/bin/psql -U postgres online_store < /path/to/shop/database.sql
 Пароль: qwerty
 ```
 
