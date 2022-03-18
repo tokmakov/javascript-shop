@@ -49,17 +49,19 @@ DB_PASS=qwerty
 DB_PORT=5432
 ```
 
-Переходим в директорию `shop/server`, запускаем сервер
+Переходим в директорию `shop/server`, устанавливаем пакеты, запускаем сервер
 
 ```
 cd /path/to/shop/server
+npm install
 npm run start-dev
 ```
 
-Переходим в директорию `shop/client`, запускаем клиент
+Переходим в директорию `shop/client`, устанавливаем пакеты, запускаем клиент
 
 ```
 cd /path/to/shop/client
+npm install
 npm start
 ```
 
