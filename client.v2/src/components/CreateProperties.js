@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Row, Col, Button, Form } from 'react-bootstrap'
 
 const CreateProperties = (props) => {

@@ -34,7 +34,7 @@ export const logout = () => {
 export const check = async () => {
     let userToken, userData
     try {
-        let userToken = localStorage.getItem('token')
+        userToken = localStorage.getItem('token')
         // если в хранилище нет действительного токена
         if (!userToken) {
             return false
